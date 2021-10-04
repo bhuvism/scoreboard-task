@@ -26,13 +26,13 @@ class ScoreBoard extends Component {
         console.log(this.state.players)
     }
 
-    handleClick(value){
+    handleClick(value1,value2){
         
         console.log(value);
         
         this.state.players.map(player => {
             
-            if(player.score===value){
+            if(player.score===value1 && player.name===value2){
                 player.score+=1;
                
                 console.log(player.score)
@@ -55,7 +55,7 @@ class ScoreBoard extends Component {
             
             { this.state.players.map(player => 
             <>
-                <h2>{player.name} &nbsp;&nbsp;&nbsp;&nbsp;{player.score}&nbsp;&nbsp;&nbsp;&nbsp; <button onClick={() => this.handleClick(player.score)}>+</button> </h2>
+                <h2>{player.name} &nbsp;&nbsp;&nbsp;&nbsp;{player.score}&nbsp;&nbsp;&nbsp;&nbsp; <button onClick={() => this.handleClick(player.score,player.name)}>+</button> </h2>
                 
             </>
             )}
