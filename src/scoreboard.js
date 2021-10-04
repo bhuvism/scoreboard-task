@@ -28,7 +28,7 @@ class ScoreBoard extends Component {
 
     handleClick(value1,value2){
         
-        console.log(value);
+        
         
         this.state.players.map(player => {
             
